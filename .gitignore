@@ -1,0 +1,12 @@
+.ipynb_checkpoints
+.DS_Store
+.idea
+notebooks/.ipynb_checkpoints
+notebooks/multithreading.ipynb
+tutorials/results
+SimCAD.egg-info
+__pycache__
+Pipfile
+Pipfile.lock
+results
+.mypy_cache
