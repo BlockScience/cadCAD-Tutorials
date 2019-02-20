@@ -15,7 +15,11 @@ Simulations may be run with a range of initial conditions and parameters for sta
 and environmental processes to understand and visualize network behavior under various conditions. Support for \
 A/B testing policies, monte carlo analysis and other common numerical methods is provided.
 
+
+
 **1. Install Dependencies:**
+
+**Note:** Tokens are issued to trial users and replace `<TOKEN>` in the script below.
 ```bash
 pip install -r requirements.txt
 python3 setup.py sdist bdist_wheel
