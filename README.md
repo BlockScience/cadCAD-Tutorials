@@ -21,7 +21,7 @@ A/B testing policies, monte carlo analysis and other common numerical methods is
 
 **Note:** Tokens are issued to trial users and replace `<TOKEN>` in the script below.
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 python3 setup.py sdist bdist_wheel
 pip3 install cadCAD --extra-index-url https://<TOKEN>@repo.fury.io/blockscience/
 ```
