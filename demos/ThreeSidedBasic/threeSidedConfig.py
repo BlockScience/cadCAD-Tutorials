@@ -21,6 +21,7 @@ tampw = 10000 # transactions limit
 alpha = .5 # for data acquisition cost
 beta = .2 # for data acquisition cost
 cost = 2.5
+periodInvestment = 1000
 
 # external states
 #cell defines the model function for the tx_volume generator stochastic process
@@ -35,8 +36,8 @@ def product_cost_generator(_g, step, sL, s, _input):
     return (y, x)
 
 def investors_generator(_g, step, sL, s, _input):
-    y = 'investors_money'
-    x = s['investors_money']*(1 -.03)**step #* (np.random.gamma(1,1))
+    y = 'seed_money'
+    x = s['seed_money']*(1 -.03)**step #* (np.random.gamma(1,1))
     return (y, x)
 
 def update_overhead_costs(_g, step, sL, s, _input):
@@ -87,7 +88,7 @@ def receive_revenue_from_consumers(_g, step, sL, s, _input):
 def receive_fiat_from_investors(_g, step, sL, s, _input):
     y = 'fiat_reserve'
     if _input['Invest'] == 1:
-        x = s['fiat_reserve'] + s['investors_money']
+        x = s['fiat_reserve'] + s['seed_money']
     else:
         x = s['fiat_reserve']
     return (y, x)
@@ -103,7 +104,7 @@ def pay_fiat_to_producers(_g, step, sL, s, _input):
 def pay_investment_expenses(_g, step, sL, s, _input):
     y = 'fiat_reserve'
     if _input['Pay'] == 1:
-        x = s['fiat_reserve'] - 1000
+        x = s['fiat_reserve'] - periodInvestment
     else:
         x = s['fiat_reserve']
     return (y, x)
@@ -121,10 +122,10 @@ def pay_overhead_costs(_g, step, sL, s, _input):
 genesis_states = {
     'tx_volume': float(10), #unit: fiat
     'product_cost': float(.3), #unit: fiat cost
-    'revenue': float(0), # cost revenue
+    'revenue': float(0), # revenue
     'fiat_reserve': float(0),#unit: fiat
     'overhead_cost': float(10000), #unit: fiat
-    'investors_money': float(10000),
+    'seed_money': float(10000),
     'time': '2018-01-01 00:00:00'
 }
 
@@ -147,7 +148,7 @@ mechanisms = {
         {
             'tx_volume': tx_volume_generator,
             'product_cost': product_cost_generator,
-            'investors_money': investors_generator,
+            'seed_money': investors_generator,
 	    'overhead_cost': update_overhead_costs
         }
 
@@ -173,7 +174,7 @@ mechanisms = {
         },
         'variables':
         {
-            'investors_money': receive_fiat_from_investors
+            'seed_money': receive_fiat_from_investors
         }
     },
     'fiat outflow':
