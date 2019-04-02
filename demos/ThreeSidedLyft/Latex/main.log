@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.1.16)  2 APR 2019 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.1.16)  22 MAR 2019 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,12 +278,22 @@ Package pdftex.def Info: images/3SidedMarketBasicDemo.png  used on input line 1
 9.
 (pdftex.def)             Requested size: 469.75502pt x 308.06392pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
@@ -292,15 +302,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./images/3SidedMarketB
 asicDemo.png>]
 Package epstopdf Info: Source file: <images/components.eps>
-(epstopdf)                    date: 2019-04-02 09:08:25
-(epstopdf)                    size: 33991 bytes
+(epstopdf)                    date: 2019-03-22 17:24:30
+(epstopdf)                    size: 45856 bytes
 (epstopdf)             Output file: <images/components-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-02 09:16:22
-(epstopdf)                    size: 12872 bytes
+(epstopdf)                    date: 2019-03-22 14:15:02
+(epstopdf)                    size: 17670 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/components-eps-conv
 erted-to.pdf images/components.eps>
-(epstopdf)             \includegraphics on input line 46.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 50.
+runsystem(repstopdf --outfile=images/components-eps-converted-to.pdf images/com
+ponents.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/components-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-22 14:16:09
+(epstopdf)                    size: 17670 bytes.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/components-eps-converted-to.pd
@@ -309,54 +324,59 @@ f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: images/components-eps-converted-to.pdf Graphic file (type pdf)
 <use images/components-eps-converted-to.pdf>
 Package pdftex.def Info: images/components-eps-converted-to.pdf  used on input 
-line 46.
+line 50.
 (pdftex.def)             Requested size: 469.75502pt x 156.58498pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
 [3 <./images/components-eps-converted-to.pdf>]
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 59.
+(Font)              <6> on input line 63.
  [4]
 Package epstopdf Info: Source file: <images/Results.eps>
-(epstopdf)                    date: 2019-04-02 10:32:02
-(epstopdf)                    size: 106192 bytes
+(epstopdf)                    date: 2019-03-22 17:24:30
+(epstopdf)                    size: 174647 bytes
 (epstopdf)             Output file: <images/Results-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-02 10:32:56
-(epstopdf)                    size: 25786 bytes
+(epstopdf)                    date: 2019-03-22 14:15:02
+(epstopdf)                    size: 44050 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/Results-eps-convert
 ed-to.pdf images/Results.eps>
-(epstopdf)             \includegraphics on input line 96.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 99.
+runsystem(repstopdf --outfile=images/Results-eps-converted-to.pdf images/Result
+s.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <images/Results-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-22 14:16:10
+(epstopdf)                    size: 44050 bytes.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./images/Results-eps-converted-to.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/Results-eps-converted-to.pdf, id=48, 1084.05pt x 1084.05pt>
+<images/Results-eps-converted-to.pdf, id=51, 1084.05pt x 1084.05pt>
 File: images/Results-eps-converted-to.pdf Graphic file (type pdf)
 <use images/Results-eps-converted-to.pdf>
 Package pdftex.def Info: images/Results-eps-converted-to.pdf  used on input lin
-e 96.
+e 99.
 (pdftex.def)             Requested size: 469.75502pt x 469.75496pt.
 [5 <./images/Results-eps-converted-to.pdf>] [6] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3007 strings out of 492641
  47227 string characters out of 6131787
- 126444 words of memory out of 5000000
+ 127445 words of memory out of 5000000
  6841 multiletter control sequences out of 15000+600000
  9399 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,68p,1601b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,68p,1006b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (6 pages, 107581 bytes).
+Output written on main.pdf (6 pages, 130098 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
