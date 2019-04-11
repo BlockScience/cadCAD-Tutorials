@@ -1,4 +1,0 @@
-tabulate
-pandas
-numpy
-matplotlib
