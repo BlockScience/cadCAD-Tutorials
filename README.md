@@ -3,7 +3,7 @@
 **Do not** publish this package / software to **any** software repository **except** one permitted by BlockScience.  
 
 **Naming Note:** 
-cadCAD was originally named "SimCAD". For technical reasons, the repo will retain the old name for the time being.
+*cadCAD* was originally named *SimCAD*. For technical reasons, the repo will retain the old name for the time being.
 
 **Description:**
 
