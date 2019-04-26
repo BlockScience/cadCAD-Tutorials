@@ -8,7 +8,7 @@ To learn more about cadCAD, follow our [tutorial series](https://github.com/Bloc
 
 **Installing cadCAD:**
 
-cadCAD is in private beta. Tokens are issued to trial users. Replace `<TOKEN>` in the installation URL below
+cadCAD is in private beta. Tokens are issued to participants. Replace `<TOKEN>` in the installation URL below
 ```bash
 pip3 install -r requirements.txt
 pip3 install cadCAD --extra-index-url https://<TOKEN>@repo.fury.io/blockscience/
