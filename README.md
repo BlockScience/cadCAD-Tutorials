@@ -1,128 +1,17 @@
 # cadCAD
-**Warning**:
-**Do not** publish this package / software to **any** software repository **except** one permitted by BlockScience.  
-
-**Naming Note:** 
-*cadCAD* was originally named *SimCAD*. For technical reasons, the repo will retain the old name for the time being.
 
 **Description:**
 
-cadCAD is a differential games based simulation software package for research, validation, and Computer \
-Aided Design of economic systems. An economic system is treated as a state based model and defined through a \
-set of endogenous and exogenous state variables which are updated through mechanisms and environmental \
-processes, respectively. Behavioral models, which may be deterministic or stochastic, provide the evolution of \
-the system within the action space of the mechanisms. Mathematical formulations of these economic games \
-treat agent utility as derived from state rather than direct from action, creating a rich dynamic modeling framework.
+cadCAD is a Python library that assists in the processes of designing, testing and validating complex systems through simulation. At its core, cadCAD is a differential games engine that supports parameter sweeping and Monte Carlo analyses and can be easily integrated with other scientific computing Python modules and data science workflows.
 
-Simulations may be run with a range of initial conditions and parameters for states, behaviors, mechanisms, \
-and environmental processes to understand and visualize network behavior under various conditions. Support for \
-A/B testing policies, monte carlo analysis and other common numerical methods is provided.
+To learn more about cadCAD, follow our [tutorial series](https://github.com/BlockScience/cadCAD-Tutorials/tree/master/01%20Tutorials)
 
+**Installing cadCAD:**
 
-
-**1. Install Dependencies:**
-
-**Note:** Tokens are issued to trial users and replace `<TOKEN>` in the script below.
+cadCAD is in private beta. Tokens are issued to trial users. Replace `<TOKEN>` in the installation URL below
 ```bash
 pip3 install -r requirements.txt
-python3 setup.py sdist bdist_wheel
 pip3 install cadCAD --extra-index-url https://<TOKEN>@repo.fury.io/blockscience/
 ```
 
-**2. Configure Simulation:**
-
-Intructions:
-`/Simulation.md`
-
-Examples:
-`/simulations/validation/*`
-
-**3. Import cadCAD & Run Simulations:**
-
-Examples: `/simulations/*.py` or `/simulations/*.ipynb`
-
-Single Simulation Run: `/simulations/single_config_run.py`
-```python
-from tabulate import tabulate
-# The following imports NEED to be in the exact order
-from cadCAD.engine import ExecutionMode, ExecutionContext, Executor
-from simulations.validation import config1
-from cadCAD import configs
-
-exec_mode = ExecutionMode()
-
-print("Simulation Execution: Single Configuration")
-print()
-first_config = configs # only contains config1
-single_proc_ctx = ExecutionContext(context=exec_mode.single_proc)
-run1 = Executor(exec_context=single_proc_ctx, configs=first_config)
-run1_raw_result, tensor_field = run1.main()
-result = pd.DataFrame(run1_raw_result)
-print()
-print("Tensor Field: config1")
-print(tabulate(tensor_field, headers='keys', tablefmt='psql'))
-print("Output:")
-print(tabulate(result, headers='keys', tablefmt='psql'))
-print()
-```
-
-Parameter Sweep Simulation Run (Concurrent): `/simulations/param_sweep_run.py`
-```python
-import pandas as pd
-from tabulate import tabulate
-# The following imports NEED to be in the exact order
-from cadCAD.engine import ExecutionMode, ExecutionContext, Executor
-from simulations.validation import sweep_config
-from cadCAD import configs
-
-exec_mode = ExecutionMode()
-
-print("Simulation Execution: Concurrent Execution")
-multi_proc_ctx = ExecutionContext(context=exec_mode.multi_proc)
-run2 = Executor(exec_context=multi_proc_ctx, configs=configs)
-
-i = 0
-config_names = ['sweep_config_A', 'sweep_config_B']
-for raw_result, tensor_field in run2.main():
-    result = pd.DataFrame(raw_result)
-    print()
-    print("Tensor Field: " + config_names[i])
-    print(tabulate(tensor_field, headers='keys', tablefmt='psql'))
-    print("Output:")
-    print(tabulate(result, headers='keys', tablefmt='psql'))
-    print()
-    i += 1
-```
-
-Multiple Simulation Runs (Concurrent): `/simulations/multi_config run.py`
-```python
-import pandas as pd
-from tabulate import tabulate
-# The following imports NEED to be in the exact order
-from cadCAD.engine import ExecutionMode, ExecutionContext, Executor
-from simulations.validation import config1, config2
-from cadCAD import configs
-
-exec_mode = ExecutionMode()
-
-print("Simulation Execution: Concurrent Execution")
-multi_proc_ctx = ExecutionContext(context=exec_mode.multi_proc)
-run2 = Executor(exec_context=multi_proc_ctx, configs=configs)
-
-i = 0
-config_names = ['config1', 'config2']
-for raw_result, tensor_field in run2.main():
-    result = pd.DataFrame(raw_result)
-    print()
-    print("Tensor Field: " + config_names[i])
-    print(tabulate(tensor_field, headers='keys', tablefmt='psql'))
-    print("Output:")
-    print(tabulate(result, headers='keys', tablefmt='psql'))
-    print()
-    i =+ 1
-```
-
-The above can be run in Jupyter.
-```bash
-jupyter notebook
-```
+If you'd like to participate in the beta program, contact cadcad [at] block [dot] science.
