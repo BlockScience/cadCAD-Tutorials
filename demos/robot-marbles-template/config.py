@@ -25,6 +25,7 @@ sim_config = config_sim({
 #     x = ep_time_step(s, dt_str=s['time'], fromat_str=ts_format, _timedelta=t_delta)
 #     return (y, x)
 
+# Behaviors
 
 # Mechanisms
 def update_A(_g, step, sL, s, _input):
