@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scribe</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+  </head>
+    <body>
+<br>
+<br>
+    <div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Three Sided Model Demo</h1>
+    <p class="lead">Fill in the variables below to run a 5 Monte Carlo run of a Three Sided Ecosystem model.</p>
+    <form action="/result" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+          <label for="conversion_fee">Type below the conversion price between fiat and tokens:</label>
+        <input type="text" class="form-control" id="conversion_fee" name="conversion_fee" placeholder="Ex. .03">
+        <label for="gamma">Type below a tuning gain:</label>
+        <input type="text" class="form-control" id="gamma" name="gamma" placeholder="Ex. .1">
+        <label for="final_supply">Type below finite supply of tokens:</label>
+        <input type="text" class="form-control" id="final_supply" name="final_supply" placeholder="Ex. 1,000,000">
+        <label for="tampw">Type below the maximum amount of transactions:</label>
+        <input type="text" class="form-control" id="tampw" name="tampw" placeholder="Ex. 100,000">
+      </div>
+      <button type="submit" class="btn btn-primary">Run</button>
+    </form>
+    <br>
+    <a href = '/data/{{fileName}}.csv' download = '{{fileName}}.csv'> Click to download csv</a>
+    <br>
+    <center><img src="static/images/simulationResults.jpeg" alt="Results" style="width:1000px;height:1000px;"></center>
+    <center><h3>Assumptions:</h3></center>
+    <ul>
+   <li>Starting unit volume of 1,000</li>
+   <li>Starting fiat reserver of 25,000</li>
+   <li>Starting token reserver of 25,000</li>
+   <li>Starting token supply of 25,000</li>
+   <li>Starts 2019-01-01 and increments every 7 days</li>
+</ul>
+  </div>
+</div>
+</body>
+</html>
