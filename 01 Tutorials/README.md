@@ -5,3 +5,5 @@ In this series, we introduce basic concepts of cadCAD and system modelling in ge
 [Part 2](robot-marbles-part-2/robot-marbles-part-2.ipynb) - Actions and State Dependent Policies  
 [Part 3](robot-marbles-part-3/robot-marbles-part-3.ipynb) - From Synchronous to Asynchronous Time  
 [Part 4](robot-marbles-part-4/robot-marbles-part-4.ipynb) - Uncertainty and Stochastic Processes  
+
+Check out the [videos](videos) folder for detailed walkthroughs of each one of the tutorials.
