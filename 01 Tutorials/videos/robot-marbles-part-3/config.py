@@ -3,7 +3,7 @@ from decimal import Decimal
 import numpy as np
 from datetime import timedelta
 from cadCAD.configuration import append_configs
-from cadCAD.configuration.utils import proc_trigger, bound_norm_random, ep_time_step, config_sim
+from cadCAD.configuration.utils import bound_norm_random, ep_time_step, config_sim
 
 seeds = {
     # 'z': np.random.RandomState(1),
@@ -36,16 +36,21 @@ def robot_arm(_g, step, sL, s):
 
 robots_periods = [2,3] # Robot 1 acts once every 2 timesteps; Robot 2 acts once every 3 timesteps
 
+def get_current_timestep(cur_substep, s):
+    if cur_substep == 1:
+        return s['timestep']+1
+    return s['timestep']
+
 def robot_arm_1(_g, step, sL, s):
     _robotId = 1
-    if s['timestep']%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 2, Robot 1 acts
+    if get_current_timestep(step, s)%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 2, Robot 1 acts
         return robot_arm(_g, step, sL, s)
     else:
         return({'add_to_A': 0, 'add_to_B': 0}) # for all other timesteps, Robot 1 doesn't interfere with the system
 
 def robot_arm_2(_g, step, sL, s):
     _robotId = 2
-    if s['timestep']%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 3, Robot 2 acts
+    if get_current_timestep(step, s)%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 3, Robot 2 acts
         return robot_arm(_g, step, sL, s)
     else:
         return({'add_to_A': 0, 'add_to_B': 0}) # for all other timesteps, Robot 2 doesn't interfere with the system
