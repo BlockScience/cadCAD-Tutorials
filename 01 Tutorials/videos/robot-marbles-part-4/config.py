@@ -3,7 +3,7 @@ from decimal import Decimal
 import numpy as np
 from datetime import timedelta
 from cadCAD.configuration import append_configs
-from cadCAD.configuration.utils import proc_trigger, bound_norm_random, ep_time_step, config_sim
+from cadCAD.configuration.utils import bound_norm_random, ep_time_step, config_sim
 
 seeds = {
     # 'z': np.random.RandomState(1),
