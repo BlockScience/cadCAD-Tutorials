@@ -2,7 +2,7 @@ import pandas as pd
 from tabulate import tabulate
 # The following imports NEED to be in the exact order
 from cadCAD.engine import ExecutionMode, ExecutionContext, Executor
-from documentation.examples import sys_model_B
+from Documentation.examples import sys_model_B
 from cadCAD import configs
 
 exec_mode = ExecutionMode()
