@@ -88,11 +88,13 @@ print()
 
 ### Multiple Simulations (Concurrent):
 ##### Multiple Simulation Execution (Multi Process Execution)
-Documentation: [Simulation Execution](link) 
+Documentation: [Simulation Execution](link)
+
 Example [System Model Configurations](link): 
 * [System Model A](link): `/documentation/examples/sys_model_A.py`
 * [System Model B](link): `/documentation/examples/sys_model_B.py`
-[Example Simulation Executions::](link) `/documentation/examples/sys_model_AB_exec.py`
+
+[Example Simulation Executions:](link) `/documentation/examples/sys_model_AB_exec.py`
 ```python
 import pandas as pd
 from tabulate import tabulate
@@ -121,7 +123,8 @@ for sys_model_AB_raw_result, sys_model_AB_tensor_field in sys_model_AB_simulatio
 ```
 
 ### Parameter Sweep Simulation (Concurrent):
-Documentation: [System Model Parameter Sweep](link) 
+Documentation: [System Model Parameter Sweep](link)
+
 [Example:](link) `/documentation/examples/param_sweep.py`
 ```python
 import pandas as pd
