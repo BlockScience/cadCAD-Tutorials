@@ -34,7 +34,7 @@ and see how it evolves. We can then use these results to inform business decisio
 
 #### Documentation:
 * ##### [Tutorials](https://github.com/BlockScience/cadCAD-Tutorials/tree/master/01%20Tutorials)
-* ##### [System Model Configuration](link)
+* ##### [System Model Configuration](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/Documentation/Simulation_Configuration.md)
 * ##### [System Simulation Execution](link)
 
 
