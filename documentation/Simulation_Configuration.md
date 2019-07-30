@@ -20,14 +20,10 @@ append_configs(
 )
 ```
 Parameters:
-* **initial_state** : _dict_
-    [State Variables](#State-Variables) and their initial values
-* **partial_state_update_blocks** : List[dict[dict]]
-    List of [Partial State Update Blocks](#Partial-State-Update-Blocks)
-* **policy_ops** : List[functions]
-    See [Policy Aggregation](/63k2ncjITuqOPCUHzK7Viw) 
-* **sim_configs** : _???_
-    See [System Model Parameter Sweep](/4oJ_GT6zRWW8AO3yMhFKrg)
+* **initial_state** : _dict_ - [State Variables](#State-Variables) and their initial values
+* **partial_state_update_blocks** : List[dict[dict]] - List of [Partial State Update Blocks](#Partial-State-Update-Blocks)
+* **policy_ops** : List[functions] - See [Policy Aggregation](/63k2ncjITuqOPCUHzK7Viw) 
+* **sim_configs** - See [System Model Parameter Sweep](/4oJ_GT6zRWW8AO3yMhFKrg)
 
 ## Simulation Properties
 
@@ -66,7 +62,7 @@ cadCAD facilitates running multiple simulations of the same system sequentially,
 Parameters of the system, passed to the state update functions and the policy functions in the `params` parameter are defined here. See [System Model Parameter Sweep](/4oJ_GT6zRWW8AO3yMhFKrg) for more information.
 
 ## System Model
-The System Model describes the system that will be simulated in cadCAD. It is comprised of a set of [State Variables](#Sate-Variables) and the [State Update Functions](#State-Update-Functions) that determine the evolution of the state of the system over time. [Policy Functions](#Policy-Functions) (representations of user policies or internal system control policies) may also be part of a System Model.
+The System Model describes the system that will be simulated in cadCAD. It is comprised of a set of [State Variables](###Sate-Variables) and the [State Update Functions](#State-Update-Functions) that determine the evolution of the state of the system over time. [Policy Functions](#Policy-Functions) (representations of user policies or internal system control policies) may also be part of a System Model.
 
 ### State Variables
 >A state variable is one of the set of variables that are used to describe the mathematical "state" of a dynamical system. Intuitively, the state of a system describes enough about the system to determine its future behaviour in the absence of any external forces affecting the system. ([source: Wikipedia](https://en.wikipedia.org/wiki/State_variable))
@@ -98,16 +94,11 @@ def state_update_function_A(_params, substep, sH, s, _input):
     return 'state_variable_name', new_value
 ```
 Parameters:
-* **_params** : _dict_
-    [System parameters](/4oJ_GT6zRWW8AO3yMhFKrg)
-* **substep** : _int_
-    Current [substep](#Substep)
-* **sH** : _list[list[dict_]]
-    Historical values of all state variables for the simulation. See [Historical State Access](/smiyQTnATtC9xPwvF8KbBQ) for details
-* **s** : _dict_
-    Current state of the system, where the `dict_keys` are the names of the state variables and the `dict_values` are their current values.
-* **_input** : _dict_
-    Aggregation of the signals of all policy functions in the current [Partial State Update Block](#Partial-State-Update-Block)
+* **_params** : _dict_ - [System parameters](/4oJ_GT6zRWW8AO3yMhFKrg)
+* **substep** : _int_ - Current [substep](#Substep)
+* **sH** : _list[list[dict_]] - Historical values of all state variables for the simulation. See [Historical State Access](/smiyQTnATtC9xPwvF8KbBQ) for details
+* **s** : _dict_ - Current state of the system, where the `dict_keys` are the names of the state variables and the `dict_values` are their current values.
+* **_input** : _dict_ - Aggregation of the signals of all policy functions in the current [Partial State Update Block](#Partial-State-Update-Block)
 
 Return:
 * _tuple_ containing a string with the name of the state variable being updated and its new value.
@@ -135,14 +126,10 @@ def policy_function_1(_params, substep, sH, s):
     return {'signal_1': value_1, ..., 'signal_N': value_N}
 ```
 Parameters:
-* **_params** : _dict_
-    [System parameters](/4oJ_GT6zRWW8AO3yMhFKrg)
-* **substep** : _int_
-    Current [substep](#Substep)
-* **sH** : _list[list[dict_]]
-    Historical values of all state variables for the simulation. See [Historical State Access](/smiyQTnATtC9xPwvF8KbBQ) for details
-* **s** : _dict_
-    Current state of the system, where the `dict_keys` are the names of the state variables and the `dict_values` are their current values.
+* **_params** : _dict_ - [System parameters](/4oJ_GT6zRWW8AO3yMhFKrg)
+* **substep** : _int_ - Current [substep](#Substep)
+* **sH** : _list[list[dict_]] - Historical values of all state variables for the simulation. See [Historical State Access](/smiyQTnATtC9xPwvF8KbBQ) for details
+* **s** : _dict_ - Current state of the system, where the `dict_keys` are the names of the state variables and the `dict_values` are their current values.
     
 Return:
 * _dict_ of signals to be passed to the state update functions in the same [Partial State Update Block](#Partial-State-Update-Blocks)
@@ -187,7 +174,8 @@ append_configs(
 ```
 
 #### Substep
-At each timestep, cadCAD iterates over the `partial_state_update_blocks` list. For each Partial State Update Block, cadCAD returns a record containing the state of the system at the end of that PSUB. We refer to that subdivision of a timestep as a `substep`.
+At each timestep, cadCAD iterates over the `partial_state_update_blocks` list. For each Partial State Update Block, 
+cadCAD returns a record containing the state of the system at the end of that PSUB. We refer to that subdivision of a timestep as a `substep`.
 
 ## Result Dataset
 
@@ -198,4 +186,4 @@ cadCAD returns a dataset containing the evolution of the state variables defined
 
 Therefore, the total number of records in the resulting dataset is `N` x `T` x `len(partial_state_update_blocks)`
 
-#### [System Simulation Execution](link)
+#### [System Simulation Execution](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/Documentation/Simulation_Execution.md)

@@ -1,4 +1,13 @@
-# cadCAD
+cadCAD
+===
+```python
+                    __________   ____ 
+  ________ __ _____/ ____/   |  / __ \
+ / ___/ __` / __  / /   / /| | / / / /
+/ /__/ /_/ / /_/ / /___/ ___ |/ /_/ / 
+\___/\__,_/\__,_/\____/_/  |_/_____/  
+by BlockScience
+```
 
 **Introduction:**
 
@@ -34,8 +43,8 @@ and see how it evolves. We can then use these results to inform business decisio
 
 #### Documentation:
 * ##### [Tutorials](https://github.com/BlockScience/cadCAD-Tutorials/tree/master/01%20Tutorials)
-* ##### [System Model Configuration](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/Documentation/Simulation_Configuration.md)
-* ##### [System Simulation Execution](link)
+* ##### [System Model Configuration](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Configuration.md)
+* ##### [System Simulation Execution](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Execution.md)
 
 
 #### 0. Installation:
@@ -49,18 +58,23 @@ pip3 install pandas pathos fn funcy tabulate
 pip3 install cadCAD --extra-index-url https://<TOKEN>@repo.fury.io/blockscience/
 ```
 
-#### 1. [Configure System Model](link)
+#### 1. [Configure System Model](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Configuration.md)
 
-#### 2. [Execute Simulations:](link)
+#### 2. [Execute Simulations:](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Execution.md)
 
 ##### Single Process Execution:
-Example [System Model Configurations](link): 
-* [System Model A](link): `/documentation/examples/sys_model_A.py`
-* [System Model B](link): `/documentation/examples/sys_model_B.py`
+Example System Model Configurations: 
+* [System Model A](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_A.py): 
+`/documentation/examples/sys_model_A.py`
+* [System Model B](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_B.py): 
+`/documentation/examples/sys_model_B.py`
 
 Example Simulation Executions:
-* [System Model A](link): `/documentation/examples/sys_model_A_exec.py`
-* [System Model B](link): `/documentation/examples/sys_model_B_exec.py`
+* [System Model A](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_A_exec.py): 
+`/documentation/examples/sys_model_A_exec.py`
+* [System Model B](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_B_exec.py): 
+`/documentation/examples/sys_model_B_exec.py`
+
 ```python
 import pandas as pd
 from tabulate import tabulate
@@ -88,13 +102,15 @@ print()
 
 ### Multiple Simulations (Concurrent):
 ##### Multiple Simulation Execution (Multi Process Execution)
-Documentation: [Simulation Execution](link)
+System Model Configurations: 
+* [System Model A](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_A.py): 
+`/documentation/examples/sys_model_A.py`
+* [System Model B](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_B.py): 
+`/documentation/examples/sys_model_B.py`
 
-Example [System Model Configurations](link): 
-* [System Model A](link): `/documentation/examples/sys_model_A.py`
-* [System Model B](link): `/documentation/examples/sys_model_B.py`
+[Example Simulation Executions:](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/sys_model_AB_exec.py)
+`/documentation/examples/sys_model_AB_exec.py`
 
-[Example Simulation Executions:](link) `/documentation/examples/sys_model_AB_exec.py`
 ```python
 import pandas as pd
 from tabulate import tabulate
@@ -123,9 +139,9 @@ for sys_model_AB_raw_result, sys_model_AB_tensor_field in sys_model_AB_simulatio
 ```
 
 ### Parameter Sweep Simulation (Concurrent):
-Documentation: [System Model Parameter Sweep](link)
+[Example:](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/examples/param_sweep.py) 
+`/documentation/examples/param_sweep.py`
 
-[Example:](link) `/documentation/examples/param_sweep.py`
 ```python
 import pandas as pd
 from tabulate import tabulate
