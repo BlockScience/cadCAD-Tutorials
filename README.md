@@ -163,5 +163,3 @@ for raw_result, tensor_field in run.execute():
     print(tabulate(result, headers='keys', tablefmt='psql'))
     print()
 ```
-
-
