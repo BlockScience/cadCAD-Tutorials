@@ -186,4 +186,4 @@ cadCAD returns a dataset containing the evolution of the state variables defined
 
 Therefore, the total number of records in the resulting dataset is `N` x `T` x `len(partial_state_update_blocks)`
 
-#### [System Simulation Execution](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/Documentation/Simulation_Execution.md)
+#### [System Simulation Execution](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Execution.md)
