@@ -55,7 +55,7 @@ participate in the beta program, contact cadcad [at] block [dot] science.
 Replace `<TOKEN>` in the installation URL below.
 ```bash
 pip3 install pandas pathos fn funcy tabulate 
-pip3 install cadCAD --extra-index-url https://<TOKEN>@repo.fury.io/blockscience/
+pip3 install cadCAD --extra-index-url https://<TOKEN>:@repo.fury.io/blockscience/
 ```
 
 #### 1. [Configure System Model](https://github.com/BlockScience/cadCAD-Tutorials/blob/master/documentation/Simulation_Configuration.md)
