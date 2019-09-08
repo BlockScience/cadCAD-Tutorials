@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+funcy
+cadCAD
+jupyter
+matplotlib
+seaborn
+networkx
