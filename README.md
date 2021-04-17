@@ -1,1 +1,1 @@
-cadCAD is now [open source](https://github.com/BlockScience/cadCAD)
+Opensource demos repository can be found [here](https://github.com/cadcad-org/demos)
